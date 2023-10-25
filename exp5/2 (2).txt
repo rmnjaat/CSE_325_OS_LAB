@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+void createChildProcess(int processNumber, int parentPID) {
+    int childPID = fork();
+
+    if (childPID == -1) {
+        perror("fork");
+        exit(1);
+    }
+
+    if (childPID == 0) {
+        // Child process
+        printf("Child %d (PID: %d) created by Parent (PPID: %d)\n", processNumber, getpid(), parentPID);
+    } else {
+        // Parent process
+        wait(NULL); // Wait for the child to complete
+        exit(0);    // Parent should exit
+    }
+}
+
+int main() {
+    printf("Parent Process (PID: %d)\n", getpid());
+    createChildProcess(1, getpid());
+    createChildProcess(2, getpid());
+    
+    return 0;
+}

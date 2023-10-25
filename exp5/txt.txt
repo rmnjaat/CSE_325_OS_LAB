@@ -1,0 +1,31 @@
+pthread_self()   return  thread number
+
+pthread_create(4)  create 4 thrad
+
+1)pthread_t ptid
+2) attribute ->NULL
+3)fn name
+4)fn parameter ->NULL
+
+
+
+
+pthread_id     return theread id of thread
+
+
+
+
+to join thread with parent process  || parent process to wait
+pthread_join()
+
+1)thid
+2)NULL
+
+
+
+#include<pthread.h> 
+
+ thread only will execute fn after joining with parent
+ 
+ 
+ pthread_create return 0 if sucessfull otherwise else;

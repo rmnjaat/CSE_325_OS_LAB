@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+#include<dirent.h>
+
+
+
+
+
+int main(){
+ 	DIR * dp;
+ 	struct dirent *dptr;
+ 
+ 	//int b = mkdir("Dirl",0777);
+ 	
+ 	
+ 
+ 	dp = opendir("Dirl");
+ 
+	while(NULL != (dptr = readdir(dp))){
+ 	
+ 	printf("%s  \n",dptr->d_name);
+ 	printf("%d  \n",dptr->d_type);
+ 	printf("%d  \n",dptr->d_ino);
+	printf("%d \n",dptr->)
+ 	
+ 	}  
+ 	
+ 	
+ 	return 0;
+
+
+}
