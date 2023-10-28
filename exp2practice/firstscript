@@ -1,0 +1,4 @@
+mkdir lab1
+cd lab1
+touch exx.txt
+echo "Raman" > exx.txt
