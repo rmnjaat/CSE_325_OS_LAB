@@ -12,11 +12,8 @@ int main()
 	int a = mkdir("Dir_1", 0777);
 	int b = mkdir("Dir_Copy", 0777);
 	
-	
 	int fd1 = open("Dir_1/original.txt", O_CREAT|O_RDWR, 0777);
-	
-
-	
+		
 	char c[1000];
 	
 	printf("input: \n");
@@ -47,16 +44,10 @@ int main()
 		no_of_files++;
 	}
 	
-	
-	
-	
 	int fd2 = open("Dir_Copy/original_Copy.txt", O_CREAT | O_RDWR, 0777);
-
 	
 	write(fd2, c, size);
 
-	
-	
 	DIR *dp1 = opendir("Dir_Copy");
 	
 	int new_no_of_files=-2;
@@ -65,8 +56,6 @@ int main()
 	{
 		new_no_of_files++;	
 	}
-	
-	
 	
 	return 0;
 }

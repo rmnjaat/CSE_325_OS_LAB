@@ -83,14 +83,15 @@ void * f2(){
 	
 	printf(" consummer requesting for data \n");
 	
-	
-	
-	if(last_index<0){
+	if(last_index<0)
+	{
 		
 		printf("consumer can't consume ,bcz buffer is empty \n");
 	
 	}
-	else{
+	
+	else
+	{
 	
 		printf("Curret buff is -> ");
 	
@@ -116,6 +117,5 @@ void * f2(){
 		
 		printf("Consumer released \n");
 			
-		
 	}
 }

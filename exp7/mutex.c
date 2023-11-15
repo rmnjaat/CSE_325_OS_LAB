@@ -84,8 +84,6 @@ void* f2(){
 	printf("Value inside t2  :  %d \n",shared);
 
 }
-
-
 */
 
 
@@ -102,18 +100,16 @@ void*f1();
 void*f2();
 
 int main(){
+
 	pthread_mutex_init(&l);
-	
-	
+		
 	pthread_t p1,p2;
 	
 	pthread_create(&p1,NULL,f1,NULL);
-	pthread_create(&p1,NULL,f2,NULL);
-	
+	pthread_create(&p2,NULL,f2,NULL);
 	
 	pthread_join(&p1,NULL);
 	pthread_join(&p2,NULL);
-	
 	
 	printf("Final value of shared var is %d :",shared);
 	
@@ -128,7 +124,7 @@ void * f1(){
 	printf(" \n p1 got access \n");
 	
 	int x=shared;
-	
+
 	x++;
 	
 	sleep(3);
@@ -140,9 +136,6 @@ void * f1(){
 	printf(" \n p1 releasing  lock \n");
 	
 }
-
-
-
 
 void * f2(){
 	

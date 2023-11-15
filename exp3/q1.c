@@ -8,7 +8,7 @@
 
 int main(){
 
-	int n,m,len;
+	int n,m,l ;
 	n= open("hello.txt",O_RDWR);
 	m=open("mango.txt",O_CREAT | O_RDWR , 0777 );
 	
@@ -20,15 +20,4 @@ int main(){
 	
 	write(m,buff,l);
 	
-	
-	
-	
-	
 	}
-	
-
-	
-	
-	
-	
-

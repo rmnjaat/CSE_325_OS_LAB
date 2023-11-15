@@ -6,7 +6,6 @@
 
 int main(){
 	
-	
 	int n;
 	char c;
 	
@@ -17,5 +16,4 @@ int main(){
 		
 	}	
 	
-
 }
