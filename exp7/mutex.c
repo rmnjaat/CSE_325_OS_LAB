@@ -108,8 +108,8 @@ int main(){
 	pthread_create(&p1,NULL,f1,NULL);
 	pthread_create(&p2,NULL,f2,NULL);
 	
-	pthread_join(&p1,NULL);
-	pthread_join(&p2,NULL);
+	pthread_join(p1,NULL);
+	pthread_join(p2,NULL);
 	
 	printf("Final value of shared var is %d :",shared);
 	

@@ -27,7 +27,6 @@ void* fn(void * i){
 
 int main(){
 
-
 	pthread_t  pid;
 	
 	struct s o;
@@ -37,16 +36,13 @@ int main(){
 	strcpy(o.s2,"def");
 	
 	pthread_create(&pid,NULL ,fn ,(void*)&o);
-	
-	
+		
 	void * res;
 	
 	pthread_join(pid,NULL);
 
-	
 	printf("%s \n" ,o.s3);
-	
-	
+		
 }
 
 
